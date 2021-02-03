@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}index
+{% endblock title %}
+{%block body %}
+{% load staticfiles %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('static/img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Code Blog</h1>
+          <span class="subheading">A Blog for software developer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</header>
+
+<!-- Main Content -->
+<div style="padding-left: 15%;">
+  {% for tuto, part_one in part_ones.items %}
+  <div class="row">
+
+
+    <div>
+      <a href="{{part_one}}">
+        <h5>{{tuto.title}}</h5>
+        <img src="{{ tuto.img.url }}" alt="">
+      </a>
+
+    </div>
+
+    {%endfor%}
+
+
+  </div>
+</div>
+
+
+
+
+<!-- Pager -->
+
+</div>
+</div>
+</div>
+
+<hr>
+
+
+
+{%endblock body%}
